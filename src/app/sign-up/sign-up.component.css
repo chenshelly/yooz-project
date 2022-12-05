@@ -1,0 +1,16 @@
+:host{
+    display: block;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 180px;
+}
+    
+ form.field{
+    flex: 1;
+}
+ form.div{
+    display: block;
+ }
+    

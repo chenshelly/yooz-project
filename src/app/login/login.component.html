@@ -1,0 +1,26 @@
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input formControlName="email" name="email" required matInput/>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="feild">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" type="password" required matInput/>
+      </mat-form-field>
+    </div>
+   
+        <div>
+            <div class="login_class">
+      <button type="button" mat-raised-button color="primary"style=" margin-top:3em ;" (click)="navigateToSecondChild()">dont have an account yet?</button>
+      <button  type="button"mat-raised-button color="primary" style="max-width:64px ; " style="margin-top:2em ;"(ngSubmit)="onSubmit()">Login</button>
+    </div>
+        </div>
+  </form>
+ <!-- <router-outlet></router-outlet>      -->
+  
+ 
+  
