@@ -10,7 +10,10 @@
     <div>
       <mat-form-field class="feild">
         <mat-label>Password</mat-label>
-        <input formControlName="password" type="password" required matInput/>
+        <input formControlName="password" matInput type="showPassword  ? 'text': 'password' " required matInput/>
+        <mat-icon matSuffix (click)="togglePasswordVisibility()">
+            {{showPassword?'visibility_off':'visibility'}}
+        </mat-icon>
       </mat-form-field>
     </div>
     <div class="signup_class">
@@ -19,8 +22,8 @@
       <button  type="submit"mat-raised-button color="primary" style="max-width:64px ; margin-top:2em ;"(ngSubmit)="onSubmit()">Sign Up</button>
       </div> 
   </form>
-    <!-- <router-outlet></router-outlet>    -->
+     <!-- <router-outlet></router-outlet>     -->
   
   
  
-      
+     

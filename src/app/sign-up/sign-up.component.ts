@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/compat/firestore';
 import {FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -9,8 +9,9 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent {
+export class SignUpComponent implements OnInit{
 
+  public showPassword: boolean = false;
   constructor(
     private _router: Router,
     private _sotre: AngularFirestore,
@@ -52,6 +53,12 @@ export class SignUpComponent {
     this._router.navigate(["logout"]);
   }
 
+  ngOnInit(): void {
+  }
 
+  
+  public togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
+  }
 
 }

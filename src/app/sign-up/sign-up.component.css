@@ -5,6 +5,7 @@ form{
     display: flex;
     flex-direction: column;
     max-width: 180px;
+    padding: 50px;
 }
     
  form.field{
